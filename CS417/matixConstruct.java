@@ -30,10 +30,12 @@ public class matixConstruct {
 		int numberofrows = rowNo.nextInt();
 		
 		Scanner rowString = new Scanner(System.in);
-		System.out.print("Enter the string you want in your row");
+		System.out.print("Enter the your matrix row: ");
 		String poo = rowString.nextLine();
 		
+		if(rowNo>0){
 		inputRow(x,poo,numberofrows-1);
+		}
 		
 		for(int i =0; i<=x.length-1; i++){
 			for(int j =0; j <= x.length-1; j++){
