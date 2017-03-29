@@ -33,7 +33,7 @@ public class matixConstruct {
 		System.out.print("Enter the your matrix row: ");
 		String poo = rowString.nextLine();
 		
-		if(rowNo>0){
+		if(numberofrows>0){
 		inputRow(x,poo,numberofrows-1);
 		}
 		
