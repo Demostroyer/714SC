@@ -1,11 +1,8 @@
 import java.util.*;
 public class matixConstruct {
-
 	
 	public static void main(String args[])
 	{
-		
-		
 		Scanner matrixLength = new Scanner(System.in);
 		System.out.print("Enter the size of your matrix: ");
 		int size = matrixLength.nextInt();
@@ -30,7 +27,7 @@ public class matixConstruct {
 		int numberofrows = rowNo.nextInt();
 		
 		Scanner rowString = new Scanner(System.in);
-		System.out.print("Enter the your matrix row: ");
+		System.out.print("Enter row string :");
 		String poo = rowString.nextLine();
 		
 		if(numberofrows>0){
@@ -49,7 +46,26 @@ public class matixConstruct {
 				}
 			}
 		}
+		
+		Scanner summingrow = new Scanner(System.in);
+		System.out.print("What row do you want to sum: ");
+		int rowNumber = summingrow.nextInt();
+		if(rowNumber>0){
+			sumRows(x,rowNumber);
+		}
 
+	}
+	
+	public static double sumRows(int[][] x, int noRow){
+		
+		double sum=0;
+		double k = 0;
+
+		for(int i =0; i<x.length; i++){
+			sum+=x[noRow-1][i];
+			}
+		System.out.println("The summation of row " + noRow + " is "  + sum);
+		return sum;
 	}
 	
 	public static int[][] inputMatrix(int size){
@@ -83,15 +99,8 @@ public class matixConstruct {
 			else{
 				int a = Integer.parseInt(q[i]);
 				x[noRow][i]=a;
-			
-				
 				{
-		
-				
 				}
-			
-	
-	
 			}
 			}return x;}
 		
